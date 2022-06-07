@@ -14,13 +14,10 @@ function getStats() {
   const padawans = getPadawanNames();
   const scores = getLightsaberScores();
   let result = [];
-  for (let i = 0; i < padawans.length; i++) {
-    let prom = [];
-    prom.push(padawans[i])
-    prom.push(scores[i])
-    result.push(prom)
+  for (let i = 0; i < padawans.length; i++) {    
+    result.push([padawans[i], scores[i]])
   };  
-  return result
+  return result;
 };
 
 function writeStats() {
